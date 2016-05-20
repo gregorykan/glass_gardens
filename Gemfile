@@ -36,6 +36,7 @@ gem 'pry-rails'
 gem 'pry-nav'
 gem 'therubyracer'
 
+gem 'formtastic', '~> 3.0'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 
