@@ -6,14 +6,12 @@
         <tr>
           <th width="30%">garden</th>
           <th width="30%">authors</th>
-          <th width="30%"></th>
         </tr>
 
         <% @gardens.each do |garden| %>
           <tr>
-            <td><%= garden.name %></td>
+            <td><%= link_to garden.name, garden_path(garden) %></td>
             <td><%= garden.author_names %></td>
-            <td><%= link_to "walk in the garden", garden_path(garden) %></td>
           </tr>
         <% end %>
       </table>
