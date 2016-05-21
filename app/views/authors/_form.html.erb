@@ -1,9 +1,10 @@
 <%= semantic_form_for @author do |f| %>
   <%= f.inputs do %>
     <%= f.input :name %>
-    <%= f.input :works, :as => :select %>
   <% end %>
   <%= f.actions do %>
     <%= f.action :submit %>
   <% end %>
 <% end %>
+
+<%= link_to "authors", authors_path %>
