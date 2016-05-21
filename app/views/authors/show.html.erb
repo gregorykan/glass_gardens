@@ -1,0 +1,12 @@
+<p>
+  <strong>Name:</strong>
+  <%= @author.name %>
+</p>
+
+<p>
+  <strong>Works:</strong>
+  <% @author.works.each do |work| %>
+    <%= @work.name %>
+  <% end %>
+</p>
+
