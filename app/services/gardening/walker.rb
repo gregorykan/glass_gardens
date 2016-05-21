@@ -7,15 +7,15 @@ module Gardening
     end
 
     def walk
-      markov_chain_generator.get_sentences(number_of_sentences).compact.join
+      markov_chain_generator.get_sentences(number_of_sentences).reject { |x| x.to_s.empty? }.join
     end
 
     def combined_authors_works
-      Work.where(author: @authors).map(&:text).compact.join(". ")
+      Work.where(author: @authors).map(&:text).reject { |x| x.to_s.empty? }.join(". ")
     end
 
     def number_of_sentences
-      combined_authors_works.split(".").compact.length
+      combined_authors_works.split(".").reject { |x| x.to_s.empty? }.length
     end
 
     def markov_chain_generator
