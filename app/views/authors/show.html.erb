@@ -1,22 +1,26 @@
-<p>
-  <strong>Name:</strong>
-  <%= @author.name %>
-</p>
-<%= link_to "edit name", edit_author_path(@author) %>
-
-<table>
-  <tr>
-    <th>work</th>
-    <th></th>
-    <th></th>
-  </tr>
-<%= link_to "add new work for #{@author.name}", new_work_path(author: @author) %>
-  <% @author.works.each do |work| %>
-    <tr>
-      <td><%= work.name %></td>
-      <td><%= link_to "edit", edit_work_path(work) %></td>
-    </tr>
-  <% end %>
-</table>
-
-<%= link_to "back to list of authors", authors_path %>
+<div id="main-container" class="container">
+  <div class="row">
+    <div class="col-xs-5">
+      <%= @author.name %>
+      <%= link_to "edit name", edit_author_path(@author) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-5">
+      <table>
+        <tr>
+          <th width="30%">work</th>
+          <th width="30%"></th>
+          <th width="30%"></th>
+        </tr>
+      <%= link_to "add new work for #{@author.name}", new_work_path(author: @author) %>
+        <% @author.works.each do |work| %>
+          <tr>
+            <td><%= link_to work.name, work_path(work) %></td>
+            <td><%= link_to "edit", edit_work_path(work) %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

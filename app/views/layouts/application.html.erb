@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GlassGardens</title>
+  <title>glass.gardens</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container">
+     <h1>glass.gardens</h1>
+     <%= link_to "gardens", gardens_path %>
+     <%= link_to "authors", authors_path %>
+     <hr>
+  </div>
 
-<%= yield %>
-
+  <%= yield %>
 </body>
 </html>

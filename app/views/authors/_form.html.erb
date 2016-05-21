@@ -1,10 +1,16 @@
-<%= semantic_form_for @author do |f| %>
-  <%= f.inputs do %>
-    <%= f.input :name %>
-  <% end %>
-  <%= f.actions do %>
-    <%= f.action :submit %>
-  <% end %>
-<% end %>
+<div id="main-container" class="container">
+  <div class="row">
+    <div class="col-xs-5">
+      <%= semantic_form_for @author do |f| %>
+        <%= f.inputs do %>
+          <%= f.input :name %>
+        <% end %>
+        <%= f.actions do %>
+          <%= f.action :submit %>
+        <% end %>
+      <% end %>
 
-<%= link_to "back to authors list", authors_path %>
+      <%= link_to "back to authors list", authors_path %>
+    </div>
+  </div>
+</div>

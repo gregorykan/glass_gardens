@@ -1,11 +1,17 @@
-<%= semantic_form_for @garden do |f| %>
-  <%= f.inputs do %>
-    <%= f.input :name %>
-    <%= f.input :authors, :as => :select %>
-  <% end %>
-  <%= f.actions do %>
-    <%= f.action :submit %>
-  <% end %>
-<% end %>
+<div id="main-container" class="container">
+  <div class="row">
+    <div class="col-xs-5">
+      <%= semantic_form_for @garden do |f| %>
+        <%= f.inputs do %>
+          <%= f.input :name %>
+          <%= f.input :authors, :as => :select %>
+        <% end %>
+        <%= f.actions do %>
+          <%= f.action :submit %>
+        <% end %>
+      <% end %>
 
-<%= link_to "back to list of gardens", gardens_path %>
+      <%= link_to "back to list of gardens", gardens_path %>
+    </div>
+  </div>
+</div>

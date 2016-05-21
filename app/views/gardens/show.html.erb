@@ -1,13 +1,17 @@
 <div id="main-container" class="container">
-  <p>
-    <strong>Name:</strong>
-    <%= @garden.name %>
-  </p>
+  <div class="row">
+    <div class="col-xs-5">
+      <strong>Name:</strong>
+      <%= @garden.name %>
+    </div>
+  </div>
 
-  <p>
-    <strong>Authors:</strong>
-    <%= @garden.author_names %>
-  </p>
+  <div class="row">
+    <div class="col-xs-5">
+      <strong>Authors:</strong>
+      <%= @garden.author_names %>
+    </div>
+  </div>
 
   <div class="row">
     <div class="col-xs-5">
@@ -17,6 +21,5 @@
 
   <%= link_to "modify this garden", edit_garden_path(@garden) %>
   <%= link_to "take another walk", garden_path(@garden) %>
-  <%= link_to "back to list of gardens", gardens_path %>
 
 </div>

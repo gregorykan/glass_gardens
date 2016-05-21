@@ -1,17 +1,19 @@
-<h1>glass.gardens</h1>
+<div id="main-container" class="container">
+  <%= link_to "add a new author", new_author_path %>
+  <div class="row">
+    <div class="col-xs-5">
+      <table>
+        <tr>
+          <th>author</th>
+          <th></th>
+        </tr>
 
-<%= link_to "back to list of gardens", gardens_path %>
-<%= link_to "add a new author", new_author_path %>
-
-<table>
-  <tr>
-    <th>author</th>
-    <th></th>
-  </tr>
-
-  <% @authors.each do |author| %>
-    <tr>
-      <td><%= link_to author.name, author_path(author) %></td>
-    </tr>
-  <% end %>
-</table>
+        <% @authors.each do |author| %>
+          <tr>
+            <td><%= link_to author.name, author_path(author) %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
