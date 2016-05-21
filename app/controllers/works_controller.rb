@@ -5,7 +5,7 @@ class WorksController < ApplicationController
   end
 
   def new
-    @work = Work.new
+    @work = Work.new(author_id: params[:author])
   end
 
   def create
