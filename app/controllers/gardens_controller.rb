@@ -43,7 +43,7 @@ class GardensController < ApplicationController
   private
 
     def garden_params
-      params.require(:garden).permit(:name, authors: [])
+      params.require(:garden).permit(:name, author_ids: [])
     end
 
 end
