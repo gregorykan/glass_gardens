@@ -3,10 +3,20 @@
   <%= @author.name %>
 </p>
 
-<p>
-  <strong>Works:</strong>
-  <% @author.works.each do |work| %>
-    <%= @work.name %>
-  <% end %>
-</p>
+<table>
+  <tr>
+    <th>work</th>
+    <th></th>
+    <th></th>
+  </tr>
 
+<%= link_to 'add work', new_work_path(author: @author) %>
+  <% @author.works.each do |work| %>
+    <tr>
+      <td><%= work.name %></td>
+      <td><%= link_to "edit", edit_work_path(work) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "authors", authors_path %>
