@@ -1,18 +1,22 @@
-<p>
-  <strong>Name:</strong>
-  <%= @garden.name %>
-</p>
+<div id="main-container" class="container">
+  <p>
+    <strong>Name:</strong>
+    <%= @garden.name %>
+  </p>
 
-<p>
-  <strong>Authors:</strong>
-  <%= @garden.author_names %>
-</p>
+  <p>
+    <strong>Authors:</strong>
+    <%= @garden.author_names %>
+  </p>
 
-<p>
-  <strong>Walk:</strong>
-  <%= @walk %>
-</p>
+  <div class="row">
+    <div class="col-xs-5">
+        <%= @walk %>
+    </div>
+  </div>
 
-<%= link_to "modify this garden", edit_garden_path(@garden) %>
-<%= link_to "take another walk", garden_path(@garden) %>
-<%= link_to "back to list of gardens", gardens_path %>
+  <%= link_to "modify this garden", edit_garden_path(@garden) %>
+  <%= link_to "take another walk", garden_path(@garden) %>
+  <%= link_to "back to list of gardens", gardens_path %>
+
+</div>
