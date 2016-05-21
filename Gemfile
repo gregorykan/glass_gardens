@@ -44,6 +44,8 @@ gem 'markov_chains'
 
 gem 'rails_12factor', group: :production
 
+gem 'puma'
+
 ruby "2.2.1"
 
 group :development, :test do
