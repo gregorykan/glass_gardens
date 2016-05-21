@@ -28,6 +28,12 @@ class WorksController < ApplicationController
 
   def update
     @work = Work.find(params[:id])
+
+    if @work.update(work_params)
+      redirect_to @work
+    else
+      render 'edit'
+    end
   end
 
   def destroy

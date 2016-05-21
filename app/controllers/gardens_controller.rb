@@ -28,6 +28,12 @@ class GardensController < ApplicationController
 
   def update
     @garden = Garden.find(params[:id])
+
+    if @garden.update(garden_params)
+      redirect_to @garden
+    else
+      render 'edit'
+    end
   end
 
   def destroy
