@@ -10,7 +10,8 @@
 
 <p>
   <strong>Walk:</strong>
-  <% @walk %>
+  <%= @walk %>
 </p>
 
+<%= link_to "take another walk", garden_path(@garden) %>
 <%= link_to "back to list of gardens", gardens_path %>
