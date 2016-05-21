@@ -37,7 +37,7 @@ gem 'pry-nav'
 gem 'therubyracer'
 
 gem 'formtastic', '~> 3.0'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
 
 gem 'markov_chains'
