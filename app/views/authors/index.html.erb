@@ -1,19 +1,17 @@
 <h1>glass.gardens</h1>
 
-<%= link_to "gardens", gardens_path %>
-<%= link_to "new author", new_author_path %>
+<%= link_to "back to list of gardens", gardens_path %>
+<%= link_to "add a new author", new_author_path %>
 
 <table>
   <tr>
     <th>author</th>
-    <th></th>
     <th></th>
   </tr>
 
   <% @authors.each do |author| %>
     <tr>
       <td><%= link_to author.name, author_path(author) %></td>
-      <td><%= link_to "edit", edit_author_path(author) %></td>
     </tr>
   <% end %>
 </table>

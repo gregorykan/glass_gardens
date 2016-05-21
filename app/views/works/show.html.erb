@@ -8,4 +8,4 @@
   <% @work.text %>
 </p>
 
-<%= link_to "author", author_path(@work.author) %>
+<%= link_to "back to #{@work.author.name}", author_path(@work.author) %>

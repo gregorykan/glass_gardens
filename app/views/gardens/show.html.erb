@@ -4,8 +4,13 @@
 </p>
 
 <p>
+  <strong>Authors:</strong>
+  <%= @garden.author_names %>
+</p>
+
+<p>
   <strong>Walk:</strong>
   <% @walk %>
 </p>
 
-<%= link_to "gardens", gardens_path %>
+<%= link_to "back to list of gardens", gardens_path %>
