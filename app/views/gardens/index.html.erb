@@ -1,0 +1,22 @@
+<h1>glass.gardens</h1>
+
+<%= link_to "authors", authors_path %>
+<%= link_to "new garden", new_garden_path %>
+
+<table>
+  <tr>
+    <th>garden</th>
+    <th>authors</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @gardens.each do |garden| %>
+    <tr>
+      <td><%= garden.name %></td>
+      <td><%= garden.authors.map {|x| x.name}.join(",") %></td>
+      <td><%= link_to "walk", garden_path(garden) %></td>
+      <td><%= link_to "edit", edit_garden_path(garden) %></td>
+    </tr>
+  <% end %>
+</table>
