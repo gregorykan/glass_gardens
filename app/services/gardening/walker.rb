@@ -11,11 +11,11 @@ module Gardening
     end
 
     def combined_authors_works
-      Work.where(author: @authors).map(&:text).join(". ")
+      Work.where(author: @authors).map(&:text).compact.join(". ")
     end
 
     def number_of_sentences
-      combined_authors_works.split(".").length
+      combined_authors_works.split(".").compact.length
     end
 
     def markov_chain_generator
